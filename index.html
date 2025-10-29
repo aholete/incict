@@ -38,7 +38,6 @@ html { height: 100%; }
     font-weight: 600;
 }
 
-/* ✝ 聖書・讃美歌表示エリア */
 .header .bible-text {
     margin-top: 8px;
     color: black;
@@ -155,6 +154,30 @@ html { height: 100%; }
     border-radius: 8px;
     border-left: 3px solid #f5576c;
 }
+
+/* 🎯 バッジコンテナ */
+.badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+/* 縦画面では縦並び */
+@media (orientation: portrait) {
+    .badge-container {
+        flex-direction: column;
+    }
+}
+
+/* 横画面では横並び */
+@media (orientation: landscape) {
+    .badge-container {
+        flex-direction: row;
+    }
+}
 </style>
 </head>
 <body>
@@ -162,7 +185,7 @@ html { height: 100%; }
 <header class="header">
     <h1 style="margin: 0;">10月29日（水）</h1>
     <div class="bible-text">
-        <div>讃美歌59：箴言30章7～9節</div>
+        <div>e-Resident of Estonia：Baron Fujimoto : #知性と教養が服を着て歩いている</div>
         <div>Peace Truth LOVE</div>
     </div>
 </header>
@@ -189,6 +212,22 @@ html { height: 100%; }
     <div id="scheduleContent" class="schedule-content"></div>
 </div>
 </div>
+
+<!-- ✅ バッジ部分 -->
+<div class="badge-container">
+  <a href="https://apps.apple.com/lt/developer/kuniaki-fujimoto/id1585749122" target="_blank">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1631577600" 
+         alt="Download on the App Store"
+         style="width: 246px; height: 82px; object-fit: contain;">
+  </a>
+
+  <a href="https://books.apple.com/jp/author/%E8%97%A4%E6%9C%AC%E9%82%A6%E7%AB%A0/id1588034259?l=en-US" target="_blank">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/get-it-on-apple-books/badge/en-us" 
+         alt="Get it on Apple Books"
+         style="width: 290px; height: 82px; object-fit: contain;">
+  </a>
+</div>
+
 </main>
 
 <script>
